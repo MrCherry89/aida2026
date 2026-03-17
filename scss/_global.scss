@@ -425,6 +425,8 @@ div{
         width: 100%;
         margin: 0 auto;
         padding: 150px 40px 150px 240px;
+        position: relative;
+        z-index: 0;
         @media(max-width: 1200px){
           padding: 100px 16px;
         } 
@@ -477,11 +479,16 @@ div{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 300px;
   z-index: 10;
   padding: 24px;
   @media(max-width: 1200px) {
     padding: 16px;
+    width: 100%;
+    transition: .3s;
+    &.bg{
+      background: #054D28;
+    }
 }
   .header-info{
     display: flex;
@@ -525,6 +532,7 @@ div{
       transition: .3s;
       opacity: 0;
       transform: scale(0);
+      border-top: 1px solid #fff;
       &.open{
         transform: scale(1);
         opacity: 1;

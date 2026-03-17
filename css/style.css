@@ -464,6 +464,8 @@ div {
   width: 100%;
   margin: 0 auto;
   padding: 150px 40px 150px 240px;
+  position: relative;
+  z-index: 0;
 }
 @media (max-width: 1200px) {
   .hero-slider .swiper-slide .slide-inner .slide-info {
@@ -521,13 +523,18 @@ div {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 300px;
   z-index: 10;
   padding: 24px;
 }
 @media (max-width: 1200px) {
   .header {
     padding: 16px;
+    width: 100%;
+    transition: 0.3s;
+  }
+  .header.bg {
+    background: #054D28;
   }
 }
 .header .header-info {
@@ -578,6 +585,7 @@ div {
     transition: 0.3s;
     opacity: 0;
     transform: scale(0);
+    border-top: 1px solid #fff;
   }
   .header .menu-wrap.open {
     transform: scale(1);

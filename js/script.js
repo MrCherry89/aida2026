@@ -39,11 +39,17 @@ const swiper = new Swiper('.hero-slider', {
 
   document.querySelectorAll('.drop-menu').forEach(btn => {
     btn.addEventListener('click', function () {
+      // Тогглим активность кнопки
       this.classList.toggle('is-active');
   
+      // Тогглим открытие меню
       document.querySelector('.menu-wrap')?.classList.toggle('open');
   
+      // Блокируем скролл страницы
       document.documentElement.classList.toggle('overflow'); // html
       document.body.classList.toggle('overflow'); // body
+  
+      // Тогглим фон у шапки
+      document.querySelector('.header')?.classList.toggle('bg');
     });
   });
